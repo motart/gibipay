@@ -18,6 +18,9 @@ export default function Layout() {
     <>
       <nav>
         <Button onClick={() => navigate('/')}>Home</Button>
+        {route === 'authenticated' && (
+          <Button onClick={() => navigate('/portfolio')}>Portfolio</Button>
+        )}
         {route !== 'authenticated' ? (
           <Button onClick={() => navigate('/login')}>Login</Button>
         ) : (

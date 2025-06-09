@@ -3,6 +3,7 @@ import { Authenticator } from "@aws-amplify/ui-react";
 import Protected from './pages/Protected';
 import Login from './pages/Login';
 import Institution from './pages/Institution';
+import Portfolio from './pages/Portfolio';
 import Layout from './components/Layout';
 import RequireAuth from './RequireAuth';
 
@@ -28,6 +29,14 @@ function App() {
               element={
                 <RequireAuth>
                   <Institution />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path="/portfolio"
+              element={
+                <RequireAuth>
+                  <Portfolio />
                 </RequireAuth>
               }
             />
