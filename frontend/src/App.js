@@ -4,6 +4,7 @@ import Protected from './pages/Protected';
 import Login from './pages/Login';
 import Institution from './pages/Institution';
 import Portfolio from './pages/Portfolio';
+import AllTransactions from './pages/AllTransactions';
 import Layout from './components/Layout';
 import RequireAuth from './RequireAuth';
 
@@ -37,6 +38,14 @@ function App() {
               element={
                 <RequireAuth>
                   <Portfolio />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path="/transactions"
+              element={
+                <RequireAuth>
+                  <AllTransactions />
                 </RequireAuth>
               }
             />

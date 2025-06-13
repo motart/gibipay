@@ -30,10 +30,16 @@ export const getTransactions = `query GetTransactions($id: ID!, $limit: Int, $cu
       transaction_id
       account_id
       name
+      merchant_name
       amount
       iso_currency_code
       payment_channel
       transaction_type
+      category
+      personal_finance_category {
+        primary
+        detailed
+      }
       date
     }
     cursor

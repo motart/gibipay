@@ -33,11 +33,19 @@ type Balances {
   iso_currency_code: String
 }
 
+type PersonalFinanceCategory {
+  primary: String
+  detailed: String
+}
+
 type Transaction {
   transaction_id: ID!
   account_id: ID
   amount: String
   name: String
+  merchant_name: String
+  category: [String]
+  personal_finance_category: PersonalFinanceCategory
   iso_currency_code: String
   date: String
   payment_channel: String
